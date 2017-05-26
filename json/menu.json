@@ -1,0 +1,56 @@
+//menú alv
+[
+	{
+		"nombre": "Tacos",
+		"platillos": [
+			{
+				"ID": "1",
+				"nombre": "Tacos de bistek",
+				"precio": "125",
+				"descripcion": "lorem ipsum",
+				"img": "public/img/tacos/1.jpg"
+			},
+			{
+				"ID": "2",
+				"nombre": "Tacos al pastor",
+				"precio": "80",
+				"descripcion": "lorem ipsum",
+				"img": "public/img/tacos/2.jpg"
+			},
+			{
+				"ID": "3",
+				"nombre": "Tacos de alambre",
+				"precio": "150",
+				"descripcion": "lorem ipsum",
+				"img": "public/img/tacos/3.jpg"
+			}
+		]
+	},
+	{
+		"nombre": "Tortas",
+		"platillos": 
+		[
+			{
+				"ID": "1",
+				"nombre": "Torta ahogada",
+				"precio": "90",
+				"descripcion": "lorem ipsum",
+				"img": "public/img/tortas/1.jpg"
+			},
+			{
+				"ID": "2",
+				"nombre": "Tacos de lomo",
+				"precio": "80",
+				"descripcion": "lorem ipsum",
+				"img": "public/img/tortas/2.jpg"
+			},
+			{
+				"ID": "3",
+				"nombre": "Torta de bistek",
+				"precio": "150",
+				"descripcion": "lorem ipsum",
+				"img": "public/img/tortas/3.jpg"
+			}
+		]
+	}
+]
