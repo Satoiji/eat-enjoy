@@ -67,21 +67,63 @@
 					"nombre": "Torta ahogada",
 					"precio": "90",
 					"descripcion": "lorem ipsum",
-					"img": "../public/img/tortas/1.jpg"
+					"img": "../public/img/tortas/1.jpg",
+					"ingredientes": [
+						{
+							"nombre": "Chile del que pica",
+						},
+						{
+							"nombre": "Lechuga",
+						},
+						{
+							"nombre": "Cebolla",
+						},
+						{
+							"nombre": "Aguacate",
+						}
+					]
 				},
 				{
 					"ID": "1",
 					"nombre": "Torta de lomo",
 					"precio": "80",
 					"descripcion": "lorem ipsum",
-					"img": "../public/img/tortas/2.jpg"
+					"img": "../public/img/tortas/2.jpg",
+					"ingredientes": [
+						{
+							"nombre": "Lechuga",
+						},
+						{
+							"nombre": "Cebolla",
+						},
+						{
+							"nombre": "Aguacate",
+						},
+						{
+							"nombre": "Mayonesa",	
+						}
+					]
 				},
 				{
 					"ID": "2",
 					"nombre": "Torta de bistek",
 					"precio": "150",
 					"descripcion": "lorem ipsum",
-					"img": "../public/img/tortas/3.jpg"
+					"img": "../public/img/tortas/3.jpg",
+					"ingredientes": [
+						{
+							"nombre": "Repollo",
+						},
+						{
+							"nombre": "Cebolla",
+						},
+						{
+							"nombre": "Cilantro",
+						},
+						{
+							"nombre": "Tomate",
+						}
+					]
 				}
 			]
 		},
