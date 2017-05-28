@@ -22,7 +22,7 @@
 
     <div class="content" style="margin-top: 65px">
     	<div class="container text-center" style="margin-top: 15px">
-    		<h3>Carrito de compra</h3>
+    		<h3>Ticket de compra</h3>
     	</div>
     </div>
 
@@ -32,30 +32,48 @@
         		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
         			<img class="img-responsive img-thumbnail" ng-src="{{food.menu[item.nav].platillos[item.prod].img}}">
         		</div>
-        		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        		<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
         			<h4>{{food.menu[item.nav].platillos[item.prod].nombre}}</h4>
         			<p>{{food.menu[item.nav].platillos[item.prod].precio | currency}}</p>
         		</div>
-        		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-        			<p>asdf</p>
+        		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+        			<h5>Cantidad</h5>
+        			<p>x 1</p>
         		</div>
         	</div>
         </div>
-        
 	</div>
+	
 	<div class="content" style= "margin-top: 15px; margin-bottom: 15px">
 		<div class="container text-center" style="margin-top: 15px; padding-top: 15px; padding-bottom: 15px" ng-controller="menuDisplayController as food">
         	<div class="row" ng-repeat="item in ticketArray.ticketDrink">
         		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
         			<img class="img-responsive" ng-src="{{food.menu[item.nav].platillos[item.prod].types[item.drink].img}}">
         		</div>
-        		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        		<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
         			<h4>{{food.menu[item.nav].platillos[item.prod].types[item.drink].nombre}}</h4>
+        			<p>{{food.menu[item.nav].platillos[item.prod].precio | currency}}</p>
         		</div>
-        		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-        			<p>{{item.cant}}</p>
+        		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+        			<h5>Cantidad</h5>
+        			<p>x {{item.cant}}</p>
         		</div>
         	</div>
+        </div>
+    </div>
+
+    <div class="content" style= "margin-top: 15px; margin-bottom: 15px">
+        <div class="container text-center" style="margin-top: 15px; padding-top: 15px; padding-bottom: 15px" ng-controller="ticketDisplayController as ticketControl">
+            <div class="row text-left">
+                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                    <p>Precio total a pagar:</p>
+                    <p>Propina recomendada para el mesero: </p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                    <p>{{ticketControl.totalCost | currency}}</p>
+                    <p>{{ticketControl.totalCost * .15 | currency}}</p>
+                </div>
+            </div>
         </div>
     </div>
 

@@ -157,12 +157,12 @@
 					"types": [
 						{
 							"ID": "0",
-							"nombre": "Coca Cola 355ml",
+							"nombre": "Coca Cola",
 							"img": "/public/img/bebidas/refrescos/1.jpg"
 						},
 						{
 							"ID": "1",
-							"nombre": "Pepsi 355ml",
+							"nombre": "Pepsi",
 							"img": "/public/img/bebidas/refrescos/2.jpg"
 						}
 					]
@@ -231,6 +231,7 @@
 				"prod": item[1]
 			});
 
+			alert("Cambios guardados, ¡revisa tu ticket para verlos!");
 			this.saveData();
 		}
 
@@ -247,7 +248,7 @@
 					this.ticketDrink[this.addingPosition].cant = item[3];
 				}
 				this.saveData();
-
+				alert("Cambios guardados, ¡revisa tu ticket para verlos!");
 			} else {
 				alert("Ingrese una cantidad antes de hacer su pedido");
 			}
@@ -293,6 +294,7 @@
 
 		this.ticketFood = [];
 		this.ticketDrink = [];
+		this.totalCost = 0;
 
 		this.loadData = function(){
 			this.ticketDrink = JSON.parse(sessionStorage.getItem("ticketDrink"));
@@ -300,5 +302,16 @@
 		}
 
 		this.loadData();
+
+		this.total = function(){
+			m = menu1;
+			for (var i = 0; i < this.ticketFood.length; i++) {
+				this.totalCost = this.totalCost + m[this.ticketFood[i].nav].platillos[this.ticketFood[i].prod].precio * 1;
+			}
+			for (var i = 0; i < this.ticketDrink.length; i++) {
+				this.totalCost = this.totalCost + m[this.ticketDrink[i].nav].platillos[this.ticketDrink[i].prod].precio * this.ticketDrink[i].cant;
+			}
+		}
+		this.total();
 	});
 })();
