@@ -77,7 +77,7 @@
                                 <input type="number" class="form-control" id="usr">
                             </div>
                             <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                                <button type="button" class="btn btn-success">
+                                <button type="button" class="btn btn-success" ng-click="food.drinkAdd([food.navSel,food.prodSel, drink.ID])">
                                     Añadir
                                 </button>
                             </div>
@@ -104,7 +104,7 @@
 
             </div>
             <div class="container text-right" style="margin-bottom: 15px">
-                <button type="button" class="btn btn-success" data-dismiss="modal">
+                <button type="button" class="btn btn-success" data-dismiss="modal" ng-click="food.foodAdd([food.navSel,food.prodSel])">
                     Añadir
                 </button>
             </div>
@@ -119,6 +119,9 @@
 
     <!-- angular -->
     <script src="../js/angular.min.js"></script>
+
+    <!-- storage -->
+    <script src="../js/ngStorage.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>

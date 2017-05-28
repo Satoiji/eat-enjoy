@@ -1,5 +1,22 @@
 (function(){
-	var app = angular.module('pageControl', []);
+	var app = angular.module('pageControl', ['ngStorage']);
+
+	/* ticketFood = [
+		{
+			nav = X
+			prod = Y
+		},
+		...
+	] */
+
+	/* ticketDrink = [
+		{
+			nav = X
+			prod = Y
+			drink = Z
+		}
+	]
+	*/
 
 	menu1 = [
 		{
@@ -174,21 +191,6 @@
 	];
 
 
-	app.controller('menuDisplayController', function(){
-
-		this.menu = menu1;
-
-		this.navSel = 0;
-
-		this.navSelected = function(index){
-			this.navSel = index;
-		}
-
-		this.prodSelected = function(index){
-			this.prodSel = index;
-		}
-
-	});
 
 	app.directive('headDefault', function(){
 		return {
@@ -204,5 +206,80 @@
 		};
 	});
 
+	app.controller('menuDisplayController', function($scope, $sessionStorage){
+		this.menu = menu1;
 
+		this.ticketFood = [];
+		this.ticketDrink = [];
+
+		this.navSel = 0;
+
+		this.navSelected = function(index){
+			this.navSel = index;
+		}
+
+		this.prodSelected = function(index){
+			this.prodSel = index;
+		}
+
+		this.foodAdd = function(item){
+			this.ticketFood.push({
+				"nav": item[0],
+				"prod": item[1]
+			});
+
+			this.saveData();
+		}
+
+		this.drinkAdd = function(item){
+			this.ticketDrink.push({
+				"nav": item[0],
+				"prod": item[1],
+				"drink": item[2]
+			});
+			
+
+			this.saveData();
+		}
+
+		this.saveData = function(){
+			var aux = [];
+			if(sessionStorage.getItem('ticketFood')){
+				aux = JSON.parse(sessionStorage.getItem("ticketFood"));
+			}
+			for (var i = 0; i < this.ticketFood.length; i++) {
+				aux.push({
+					"nav": this.ticketFood[i].nav,
+					"prod": this.ticketFood[i].prod
+				});
+			}
+			sessionStorage.setItem("ticketFood", JSON.stringify(aux));
+
+			aux = []
+			if(sessionStorage.getItem('ticketDrink')){
+				aux = JSON.parse(sessionStorage.getItem("ticketDrink"));
+			}
+			for (var i = 0; i < this.ticketDrink.length; i++) {
+				aux.push({
+					"nav": this.ticketDrink[i].nav,
+					"prod": this.ticketDrink[i].prod,
+					"drink": this.ticketDrink[i].drink
+				});
+			}
+			sessionStorage.setItem("ticketDrink", JSON.stringify(aux));
+		}
+	});
+
+	app.controller('ticketDisplayController', function($scope, $sessionStorage){
+
+		this.ticketFood = [];
+		this.ticketDrink = [];
+
+		this.loadData = function(){
+			this.ticketDrink = JSON.parse(sessionStorage.getItem("ticketDrink"));
+			this.ticketFood = JSON.parse(sessionStorage.getItem("ticketFood"));
+		}
+
+		this.loadData();
+	});
 })();
