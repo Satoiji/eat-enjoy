@@ -178,6 +178,7 @@
 							"ID": "0",
 							"nombre": "Limonada",
 							"img": "/public/img/bebidas/aguas/1.jpg"
+
 						},
 						{
 							"ID": "1",
@@ -214,6 +215,8 @@
 
 		this.navSel = 0;
 
+		this.addingPosition = 0;
+
 		this.navSelected = function(index){
 			this.navSel = index;
 		}
@@ -232,14 +235,32 @@
 		}
 
 		this.drinkAdd = function(item){
-			this.ticketDrink.push({
-				"nav": item[0],
-				"prod": item[1],
-				"drink": item[2]
-			});
-			
+			if(item[3] > 0){
+				if(!this.drinkInTicket(item[1], item[2])){
+					this.ticketDrink.push({
+						"nav": item[0],
+						"prod": item[1],
+						"drink": item[2],
+						"cant": item[3]
+					});
+				} else {
+					this.ticketDrink[this.addingPosition].cant = item[3];
+				}
+				this.saveData();
 
-			this.saveData();
+			} else {
+				alert("Ingrese una cantidad antes de hacer su pedido");
+			}
+		}
+
+		this.drinkInTicket = function(number1, number2){
+			for (var i = 0; i < this.ticketDrink.length; i++) {
+				if(this.ticketDrink[i].prod == number1 && this.ticketDrink[i].drink == number2){
+					this.addingPosition = i;
+					return true;
+				}
+			}
+			return false;
 		}
 
 		this.saveData = function(){
@@ -255,19 +276,17 @@
 			}
 			sessionStorage.setItem("ticketFood", JSON.stringify(aux));
 
-			aux = []
-			if(sessionStorage.getItem('ticketDrink')){
-				aux = JSON.parse(sessionStorage.getItem("ticketDrink"));
-			}
-			for (var i = 0; i < this.ticketDrink.length; i++) {
-				aux.push({
-					"nav": this.ticketDrink[i].nav,
-					"prod": this.ticketDrink[i].prod,
-					"drink": this.ticketDrink[i].drink
-				});
-			}
-			sessionStorage.setItem("ticketDrink", JSON.stringify(aux));
+			sessionStorage.setItem("ticketDrink", JSON.stringify(this.ticketDrink));
 		}
+
+		this.initializeDrink = function(){
+			this.ticketDrink = JSON.parse(sessionStorage.getItem("ticketDrink"));
+			if(this.ticketDrink == null){
+				this.ticketDrink = [];
+			}
+		}
+
+		this.initializeDrink();
 	});
 
 	app.controller('ticketDisplayController', function($scope, $sessionStorage){
