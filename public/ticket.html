@@ -32,31 +32,35 @@
         		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
         			<img class="img-responsive img-thumbnail" ng-src="{{food.menu[item.nav].platillos[item.prod].img}}">
         		</div>
-        		<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+        		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
         			<h4>{{food.menu[item.nav].platillos[item.prod].nombre}}</h4>
         			<p>{{food.menu[item.nav].platillos[item.prod].precio | currency}}</p>
         		</div>
-        		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-        			<h5>Cantidad</h5>
-        			<p>x 1</p>
+        		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                <br>
+                <button ng-click="ticketArray.foodDelete(item.nav,item.prod)" class="glyphicon glyphicon-remove">
+                        
+                    </button>
         		</div>
+                <hr>
         	</div>
         </div>
 	</div>
-	
 	<div class="content" style= "margin-top: 15px; margin-bottom: 15px">
 		<div class="container text-center" style="margin-top: 15px; padding-top: 15px; padding-bottom: 15px" ng-controller="menuDisplayController as food">
         	<div class="row" ng-repeat="item in ticketArray.ticketDrink">
         		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
         			<img class="img-responsive" ng-src="{{food.menu[item.nav].platillos[item.prod].types[item.drink].img}}">
         		</div>
-        		<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+        		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
         			<h4>{{food.menu[item.nav].platillos[item.prod].types[item.drink].nombre}}</h4>
-        			<p>{{food.menu[item.nav].platillos[item.prod].precio | currency}}</p>
+        			<p>{{food.menu[item.nav].platillos[item.prod].precio | currency}} x {{item.cant}}</p>
         		</div>
-        		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-        			<h5>Cantidad</h5>
-        			<p>x {{item.cant}}</p>
+        		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                    <br>
+        			<button ng-click="ticketArray.drinkDelete(item.nav,item.prod, item.drink)" class="glyphicon glyphicon-remove">
+                        
+                    </button>
         		</div>
         	</div>
         </div>

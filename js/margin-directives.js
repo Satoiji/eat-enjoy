@@ -30,13 +30,46 @@
 					"img": "../public/img/tacos/1.jpg",
 					"ingredientes": [
 						{
+							"ID": "0",
 							"nombre": "Cilantro",
 						},
 						{
+							"ID": "1",
 							"nombre": "Cebolla",
 						},
 						{
+							"ID": "2",
 							"nombre": "Aguacate",
+						}
+					],
+					"calorias": [
+						{
+							"nombre": "grasas totales",
+							"cantidades": "130 g"
+						},
+						{
+							"nombre": "grasas saturadas",
+							"cantidades": "50 g"
+						},
+						{
+							"nombre": "calorias",
+							"cantidades": "90 g"
+						},
+						{
+							"nombre": "valor energético",
+							"cantidades": "6000 kJ"
+						},
+						{
+							"nombre": "azucares",
+							"cantidades": "100 g"
+						},
+						{
+							"nombre": "proteinas",
+							"cantidades": "50 g"
+						},
+						{
+							"nombre": "sal",
+							"cantidades": "6 g"
 						}
 					]
 				},
@@ -48,10 +81,42 @@
 					"img": "../public/img/tacos/2.jpg",
 					"ingredientes": [
 						{
+							"ID": "0",
 							"nombre": "Cilantro",
 						},
 						{
+							"ID": "1",
 							"nombre": "Cebolla",
+						}
+					],
+					"calorias": [
+						{
+							"nombre": "grasas totales",
+							"cantidades": "100 g"
+						},
+						{
+							"nombre": "grasas saturadas",
+							"cantidades": "30 g"
+						},
+						{
+							"nombre": "calorias",
+							"cantidades": "70g"
+						},
+						{
+							"nombre": "valor energético",
+							"cantidades": "5000 kJ"
+						},
+						{
+							"nombre": "azucares",
+							"cantidades": "80 g"
+						},
+						{
+							"nombre": "proteinas",
+							"cantidades": "60 g"
+						},
+						{
+							"nombre": "sal",
+							"cantidades": "2 g"
 						}
 					]
 				},
@@ -63,13 +128,46 @@
 					"img": "../public/img/tacos/3.jpg",
 					"ingredientes": [
 						{
+							"ID": "0",
 							"nombre": "Pimiento Morron",
 						},
 						{
+							"ID": "1",
 							"nombre": "Cebolla",
 						},
 						{
+							"ID": "2",
 							"nombre": "Queso",
+						}
+					],
+					"calorias": [
+						{
+							"nombre": "grasas totales",
+							"cantidades": "150 g"
+						},
+						{
+							"nombre": "grasas saturadas",
+							"cantidades": "100 g"
+						},
+						{
+							"nombre": "calorias",
+							"cantidades": "120 g"
+						},
+						{
+							"nombre": "valor energético",
+							"cantidades": "8500 kJ"
+						},
+						{
+							"nombre": "azucares",
+							"cantidades": "100 g"
+						},
+						{
+							"nombre": "proteinas",
+							"cantidades": "75 g"
+						},
+						{
+							"nombre": "sal",
+							"cantidades": "5 g"
 						}
 					]
 				}
@@ -87,16 +185,50 @@
 					"img": "../public/img/tortas/1.jpg",
 					"ingredientes": [
 						{
+							"ID": "0",
 							"nombre": "Chile del que pica",
 						},
 						{
+							"ID": "1",
 							"nombre": "Lechuga",
 						},
 						{
+							"ID": "2",
 							"nombre": "Cebolla",
 						},
 						{
+							"ID": "3",
 							"nombre": "Aguacate",
+						}
+					],
+					"calorias": [
+						{
+							"nombre": "grasas totales",
+							"cantidades": "200 g"
+						},
+						{
+							"nombre": "grasas saturadas",
+							"cantidades": "120 g"
+						},
+						{
+							"nombre": "calorias",
+							"cantidades": "150 g"
+						},
+						{
+							"nombre": "valor energético",
+							"cantidades": "9000 kJ"
+						},
+						{
+							"nombre": "azucares",
+							"cantidades": "50 g"
+						},
+						{
+							"nombre": "proteinas",
+							"cantidades": "100 g"
+						},
+						{
+							"nombre": "sal",
+							"cantidades": "3 g"
 						}
 					]
 				},
@@ -108,16 +240,50 @@
 					"img": "../public/img/tortas/2.jpg",
 					"ingredientes": [
 						{
+							"ID": "0",
 							"nombre": "Lechuga",
 						},
 						{
+							"ID": "1",
 							"nombre": "Cebolla",
 						},
 						{
+							"ID": "2",
 							"nombre": "Aguacate",
 						},
 						{
+							"ID": "3",
 							"nombre": "Mayonesa",	
+						}
+					],
+					"calorias": [
+						{
+							"nombre": "grasas totales",
+							"cantidades": "100 g"
+						},
+						{
+							"nombre": "grasas saturadas",
+							"cantidades": "30 g"
+						},
+						{
+							"nombre": "calorias",
+							"cantidades": "60 g"
+						},
+						{
+							"nombre": "valor energético",
+							"cantidades": "3000 kJ"
+						},
+						{
+							"nombre": "azucares",
+							"cantidades": "50 g"
+						},
+						{
+							"nombre": "proteinas",
+							"cantidades": "50 g"
+						},
+						{
+							"nombre": "sal",
+							"cantidades": "3 g"
 						}
 					]
 				},
@@ -129,16 +295,50 @@
 					"img": "../public/img/tortas/3.jpg",
 					"ingredientes": [
 						{
+							"ID": "0",
 							"nombre": "Repollo",
 						},
 						{
+							"ID": "1",
 							"nombre": "Cebolla",
 						},
 						{
+							"ID": "2",
 							"nombre": "Cilantro",
 						},
 						{
+							"ID": "3",
 							"nombre": "Tomate",
+						}
+					],
+					"calorias": [
+						{
+							"nombre": "grasas totales",
+							"cantidades": "150 g"
+						},
+						{
+							"nombre": "grasas saturadas",
+							"cantidades": "130 g"
+						},
+						{
+							"nombre": "calorias",
+							"cantidades": "90 g"
+						},
+						{
+							"nombre": "valor energético",
+							"cantidades": "10000 kJ"
+						},
+						{
+							"nombre": "azucares",
+							"cantidades": "30 g"
+						},
+						{
+							"nombre": "proteinas",
+							"cantidades": "30 g"
+						},
+						{
+							"nombre": "sal",
+							"cantidades": "10 g"
 						}
 					]
 				}
@@ -305,13 +505,51 @@
 
 		this.total = function(){
 			m = menu1;
-			for (var i = 0; i < this.ticketFood.length; i++) {
-				this.totalCost = this.totalCost + m[this.ticketFood[i].nav].platillos[this.ticketFood[i].prod].precio * 1;
+			if(this.ticketFood){
+				for (var i = 0; i < this.ticketFood.length; i++) {
+					this.totalCost = this.totalCost + m[this.ticketFood[i].nav].platillos[this.ticketFood[i].prod].precio * 1;
+				}
 			}
-			for (var i = 0; i < this.ticketDrink.length; i++) {
-				this.totalCost = this.totalCost + m[this.ticketDrink[i].nav].platillos[this.ticketDrink[i].prod].precio * this.ticketDrink[i].cant;
+			if (this.ticketDrink) {
+				for (var i = 0; i < this.ticketDrink.length; i++) {
+					this.totalCost = this.totalCost + m[this.ticketDrink[i].nav].platillos[this.ticketDrink[i].prod].precio * this.ticketDrink[i].cant;
+				}
 			}
 		}
+
+		this.foodDelete = function(nav,prod){
+			for (var i = 0; i < this.ticketFood.length; i++) {
+				if(this.ticketFood[i].nav == nav && this.ticketFood[i].prod == prod){
+					this.ticketFood.splice(i,1);
+				}
+			}
+
+			sessionStorage.setItem("ticketFood", JSON.stringify(this.ticketFood));
+		}
+
+		this.drinkDelete = function(nav,prod, drink){
+			for (var i = 0; i < this.ticketDrink.length; i++) {
+				if(this.ticketDrink[i].nav == nav && this.ticketDrink[i].prod == prod && this.ticketDrink[i].drink == drink){
+					this.ticketDrink.splice(i,1);
+				}
+			}
+
+			sessionStorage.setItem("ticketDrink", JSON.stringify(this.ticketDrink));
+		}
+
 		this.total();
+	});
+
+	app.controller('contentController', function(){
+		this.show = false;
+
+		this.toggle = function(){
+			this.show = !this.show;
+			if(this.show){
+				document.getElementById("btnCaloria").innerHTML = "Ocultar contenido calorico";
+			} else {
+				document.getElementById("btnCaloria").innerHTML = "Mostrar contenido calorico";
+			}
+		}
 	});
 })();

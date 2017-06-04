@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
-<body style="background-color: orange" ng-controller="menuDisplayController as food">
+<body style="background-image: url('../public/img/fondo.jpg'); background-position: center" ng-controller="menuDisplayController as food">
     
     <head-default></head-default>
 
@@ -87,7 +87,7 @@
             </div>
         </div>
 
-        <div class="modal-content" ng-hide="food.navSel == 2">
+        <div class="modal-content" ng-hide="food.navSel == 2" ng-controller="contentController as content">
             <div class="container" style="padding-top: 15px">
                 <img ng-src="{{food.menu[food.navSel].platillos[food.prodSel].img}}" class="img-responsive">
                 <h3>{{food.menu[food.navSel].platillos[food.prodSel].nombre}}</h3>
@@ -98,15 +98,38 @@
                         <p>{{ingrediente.nombre}}</p>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                        <label class="checkbox-inline"><input type="checkbox" value="" checked>Añadir</label>
+                        <label class="checkbox-inline"><input type="checkbox" checked>Añadir</label>
                     </div>
                 </div>
-
             </div>
-            <div class="container text-right" style="margin-bottom: 15px">
-                <button type="button" class="btn btn-success" data-dismiss="modal" ng-click="food.foodAdd([food.navSel,food.prodSel])">
-                    Añadir
-                </button>
+            <div class="container" style="margin-bottom: 15px">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <button id="btnCaloria" type="button" class="btn btn-warning"
+                        ng-click="content.toggle()">
+                            Mostrar contenido calorico
+                        </button>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
+                        <button type="button" class="btn btn-success" data-dismiss="modal" ng-click="food.foodAdd([food.navSel,food.prodSel])">
+                            Añadir
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="container" style="margin-bottom: 15px" ng-show="content.show">
+                <div class="container">
+                    <div class="row">
+                        <h4>Contenido</h4>
+                    </div>
+                    <div class="row">
+                        <ul class="list-inline" ng-repeat="tipo in food.menu[food.navSel].platillos[food.prodSel].calorias">
+                            <li>
+                                <p><b>{{tipo.nombre}}: </b>{{tipo.cantidades}}</p>      
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
