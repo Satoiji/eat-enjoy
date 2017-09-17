@@ -1,28 +1,155 @@
-//menú alv
 [
 	{
 		"nombre": "Tacos",
 		"platillos": [
 			{
-				"ID": "1",
+				"ID": "0",
 				"nombre": "Tacos de bistek",
 				"precio": "125",
-				"descripcion": "lorem ipsum",
-				"img": "public/img/tacos/1.jpg"
+				"descripcion": "5 tacos de bistek con doble tortilla",
+				"img": "../public/img/tacos/1.jpg",
+				"ingredientes": [
+					{
+						"ID": "0",
+						"nombre": "Cilantro"
+					},
+					{
+						"ID": "1",
+						"nombre": "Cebolla"
+					},
+					{
+						"ID": "2",
+						"nombre": "Aguacate"
+					}
+				],
+				"calorias": [
+					{
+						"nombre": "grasas totales",
+						"cantidades": "130 g"
+					},
+					{
+						"nombre": "grasas saturadas",
+						"cantidades": "50 g"
+					},
+					{
+						"nombre": "calorias",
+						"cantidades": "90 g"
+					},
+					{
+						"nombre": "valor energético",
+						"cantidades": "6000 kJ"
+					},
+					{
+						"nombre": "azucares",
+						"cantidades": "100 g"
+					},
+					{
+						"nombre": "proteinas",
+						"cantidades": "50 g"
+					},
+					{
+						"nombre": "sal",
+						"cantidades": "6 g"
+					}
+				]
+			},
+			{
+				"ID": "1",
+				"nombre": "Tacos al pastor",
+				"precio": "80",
+				"descripcion": "6 tacos al pastor con doble tortilla",
+				"img": "../public/img/tacos/2.jpg",
+				"ingredientes": [
+					{
+						"ID": "0",
+						"nombre": "Cilantro"
+					},
+					{
+						"ID": "1",
+						"nombre": "Cebolla"
+					}
+				],
+				"calorias": [
+					{
+						"nombre": "grasas totales",
+						"cantidades": "100 g"
+					},
+					{
+						"nombre": "grasas saturadas",
+						"cantidades": "30 g"
+					},
+					{
+						"nombre": "calorias",
+						"cantidades": "70g"
+					},
+					{
+						"nombre": "valor energético",
+						"cantidades": "5000 kJ"
+					},
+					{
+						"nombre": "azucares",
+						"cantidades": "80 g"
+					},
+					{
+						"nombre": "proteinas",
+						"cantidades": "60 g"
+					},
+					{
+						"nombre": "sal",
+						"cantidades": "2 g"
+					}
+				]
 			},
 			{
 				"ID": "2",
-				"nombre": "Tacos al pastor",
-				"precio": "80",
-				"descripcion": "lorem ipsum",
-				"img": "public/img/tacos/2.jpg"
-			},
-			{
-				"ID": "3",
 				"nombre": "Tacos de alambre",
 				"precio": "150",
-				"descripcion": "lorem ipsum",
-				"img": "public/img/tacos/3.jpg"
+				"descripcion": "Platillo preparado para tacos de alambre",
+				"img": "../public/img/tacos/3.jpg",
+				"ingredientes": [
+					{
+						"ID": "0",
+						"nombre": "Pimiento Morron"
+					},
+					{
+						"ID": "1",
+						"nombre": "Cebolla"
+					},
+					{
+						"ID": "2",
+						"nombre": "Queso"
+					}
+				],
+				"calorias": [
+					{
+						"nombre": "grasas totales",
+						"cantidades": "150 g"
+					},
+					{
+						"nombre": "grasas saturadas",
+						"cantidades": "100 g"
+					},
+					{
+						"nombre": "calorias",
+						"cantidades": "120 g"
+					},
+					{
+						"nombre": "valor energético",
+						"cantidades": "8500 kJ"
+					},
+					{
+						"nombre": "azucares",
+						"cantidades": "100 g"
+					},
+					{
+						"nombre": "proteinas",
+						"cantidades": "75 g"
+					},
+					{
+						"nombre": "sal",
+						"cantidades": "5 g"
+					}
+				]
 			}
 		]
 	},
@@ -31,25 +158,214 @@
 		"platillos": 
 		[
 			{
-				"ID": "1",
+				"ID": "0",
 				"nombre": "Torta ahogada",
 				"precio": "90",
 				"descripcion": "lorem ipsum",
-				"img": "public/img/tortas/1.jpg"
+				"img": "../public/img/tortas/1.jpg",
+				"ingredientes": [
+					{
+						"ID": "0",
+						"nombre": "Chile del que pica"
+					},
+					{
+						"ID": "1",
+						"nombre": "Lechuga"
+					},
+					{
+						"ID": "2",
+						"nombre": "Cebolla"
+					},
+					{
+						"ID": "3",
+						"nombre": "Aguacate"
+					}
+				],
+				"calorias": [
+					{
+						"nombre": "grasas totales",
+						"cantidades": "200 g"
+					},
+					{
+						"nombre": "grasas saturadas",
+						"cantidades": "120 g"
+					},
+					{
+						"nombre": "calorias",
+						"cantidades": "150 g"
+					},
+					{
+						"nombre": "valor energético",
+						"cantidades": "9000 kJ"
+					},
+					{
+						"nombre": "azucares",
+						"cantidades": "50 g"
+					},
+					{
+						"nombre": "proteinas",
+						"cantidades": "100 g"
+					},
+					{
+						"nombre": "sal",
+						"cantidades": "3 g"
+					}
+				]
+			},
+			{
+				"ID": "1",
+				"nombre": "Torta de lomo",
+				"precio": "80",
+				"descripcion": "lorem ipsum",
+				"img": "../public/img/tortas/2.jpg",
+				"ingredientes": [
+					{
+						"ID": "0",
+						"nombre": "Lechuga"
+					},
+					{
+						"ID": "1",
+						"nombre": "Cebolla"
+					},
+					{
+						"ID": "2",
+						"nombre": "Aguacate"
+					},
+					{
+						"ID": "3",
+						"nombre": "Mayonesa"	
+					}
+				],
+				"calorias": [
+					{
+						"nombre": "grasas totales",
+						"cantidades": "100 g"
+					},
+					{
+						"nombre": "grasas saturadas",
+						"cantidades": "30 g"
+					},
+					{
+						"nombre": "calorias",
+						"cantidades": "60 g"
+					},
+					{
+						"nombre": "valor energético",
+						"cantidades": "3000 kJ"
+					},
+					{
+						"nombre": "azucares",
+						"cantidades": "50 g"
+					},
+					{
+						"nombre": "proteinas",
+						"cantidades": "50 g"
+					},
+					{
+						"nombre": "sal",
+						"cantidades": "3 g"
+					}
+				]
 			},
 			{
 				"ID": "2",
-				"nombre": "Tacos de lomo",
-				"precio": "80",
-				"descripcion": "lorem ipsum",
-				"img": "public/img/tortas/2.jpg"
-			},
-			{
-				"ID": "3",
 				"nombre": "Torta de bistek",
 				"precio": "150",
 				"descripcion": "lorem ipsum",
-				"img": "public/img/tortas/3.jpg"
+				"img": "../public/img/tortas/3.jpg",
+				"ingredientes": [
+					{
+						"ID": "0",
+						"nombre": "Repollo"
+					},
+					{
+						"ID": "1",
+						"nombre": "Cebolla"
+					},
+					{
+						"ID": "2",
+						"nombre": "Cilantro"
+					},
+					{
+						"ID": "3",
+						"nombre": "Tomate"
+					}
+				],
+				"calorias": [
+					{
+						"nombre": "grasas totales",
+						"cantidades": "150 g"
+					},
+					{
+						"nombre": "grasas saturadas",
+						"cantidades": "130 g"
+					},
+					{
+						"nombre": "calorias",
+						"cantidades": "90 g"
+					},
+					{
+						"nombre": "valor energético",
+						"cantidades": "10000 kJ"
+					},
+					{
+						"nombre": "azucares",
+						"cantidades": "30 g"
+					},
+					{
+						"nombre": "proteinas",
+						"cantidades": "30 g"
+					},
+					{
+						"nombre": "sal",
+						"cantidades": "10 g"
+					}
+				]
+			}
+		]
+	},
+	{
+		"nombre": "Bebidas",
+		"platillos": 
+		[
+			{
+				"ID": "0",
+				"nombre": "Refrescos",
+				"precio": "20",
+				"descripcion": "lorem ipsum",
+				"img": "../public/img/bebidas/1.jpg",
+				"types": [
+					{
+						"ID": "0",
+						"nombre": "Coca Cola",
+						"img": "/public/img/bebidas/refrescos/1.jpg"
+					},
+					{
+						"ID": "1",
+						"nombre": "Pepsi",
+						"img": "/public/img/bebidas/refrescos/2.jpg"
+					}
+				]
+			},
+			{
+				"ID": "1",
+				"nombre": "Aguas Frescas",
+				"precio": "15",
+				"descripcion": "lorem ipsum",
+				"img": "../public/img/bebidas/2.jpg",
+				"types": [
+					{
+						"ID": "0",
+						"nombre": "Limonada",
+						"img": "/public/img/bebidas/aguas/1.jpg"
+
+					},
+					{
+						"ID": "1",
+						"nombre": "Horchata",
+						"img": "/public/img/bebidas/aguas/2.jpg"
+					}
+				]
 			}
 		]
 	}

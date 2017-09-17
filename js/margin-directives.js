@@ -391,8 +391,6 @@
 		}
 	];
 
-
-
 	app.directive('headDefault', function(){
 		return {
 			restrict: 'E',
@@ -406,8 +404,17 @@
 			templateUrl: '../public/directives/footer.html'
 		};
 	});
+	
+	app.controller('menuDisplayController', function($scope, $sessionStorage, $http){
+		
+		/*
+		//$http.get("localhost:11100/json/menu.json").then(function (response) {
+		  //  $scope.menu = response;
+		//});
+		Utilizar el JSON menu.json para obtener todos los menus
 
-	app.controller('menuDisplayController', function($scope, $sessionStorage){
+		*/
+
 		this.menu = menu1;
 
 		this.ticketFood = [];
@@ -431,7 +438,7 @@
 				"prod": item[1]
 			});
 
-			alert("Cambios guardados, ¡revisa tu ticket para verlos!");
+			alert("Cambios guardados, ¡revisa tu ticket para ver tu pedido!");
 			this.saveData();
 		}
 
